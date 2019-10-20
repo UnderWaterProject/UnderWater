@@ -8,3 +8,12 @@ C:\Users\Administrator\source\repos\项目解决方案\UnderWater\obj\Debug\Unde
 C:\Users\Administrator\source\repos\项目解决方案\UnderWater\obj\Debug\UnderWater.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\项目解决方案\UnderWater\obj\Debug\UnderWater.exe
 C:\Users\Administrator\source\repos\项目解决方案\UnderWater\obj\Debug\UnderWater.pdb
+C:\Users\zjm\Desktop\UnderWater\bin\Debug\UnderWater.exe.config
+C:\Users\zjm\Desktop\UnderWater\obj\Debug\UnderWater.exe
+C:\Users\zjm\Desktop\UnderWater\obj\Debug\UnderWater.pdb
+C:\Users\zjm\Desktop\UnderWater\bin\Debug\UnderWater.exe
+C:\Users\zjm\Desktop\UnderWater\bin\Debug\UnderWater.pdb
+C:\Users\zjm\Desktop\UnderWater\obj\Debug\UnderWater.csprojResolveAssemblyReference.cache
+C:\Users\zjm\Desktop\UnderWater\obj\Debug\UnderWater.MainForm.resources
+C:\Users\zjm\Desktop\UnderWater\obj\Debug\UnderWater.Properties.Resources.resources
+C:\Users\zjm\Desktop\UnderWater\obj\Debug\UnderWater.csproj.GenerateResource.Cache
