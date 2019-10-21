@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<水下连接器结构失效 type ="top" option ="+">
+  <底座下接头失效 type="mid" option ="+">
+    <下法兰失效 type="mid" option ="+">
+      <与卡爪配合面压溃-下法兰失效 type ="bottom" name ="connectorLowerFlangeAndJawFaceCrush">
+        <value>0.0</value>
+      </与卡爪配合面压溃-下法兰失效>
+      <与密封圈配合面压溃-下法兰失效 type="bottom" name ="connectorLowerFlangeAndStealRingFaceCrush">
+        <value>0.0</value>
+      </与密封圈配合面压溃-下法兰失效>
+      <与上法兰配合面压溃 type="bottom" name="connectorLowerFlangeAndUpperFlangeFaceCrush">
+        <value>0.0</value>
+      </与上法兰配合面压溃>
+    </下法兰失效>
+    <卡板弯曲 type ="bottom" name="connectorBottomJointPlateBending">
+      <value>0.0</value>
+    </卡板弯曲>
+    <上下壁筒失效 type="mid" option ="+">
+      <开焊 type ="bottom" name="connectorUpperAndLowerWallTubeWeldingCrack">
+        <value>0.0</value>
+      </开焊>
+      <裂缝 type ="bottom" name="connectorUpperAndLowerWallTubeCrack">
+        <value>0.0</value>
+      </裂缝>
+      <弯曲变形 type ="bottom" name="connectorUpperAndLowerWallTubeDeformation">
+        <value>0.0</value>
+      </弯曲变形>
+    </上下壁筒失效>
+  </底座下接头失效>
+  <卡爪上接头失效 type="mid" option="+">
+    <上法兰失效 type="mid" option="+">
+      <与卡爪配合面压溃-上法兰失效 type ="bottom" name="connectorUpperFlangeAndJawFaceCrush">
+        <value>0.0</value>
+      </与卡爪配合面压溃-上法兰失效>
+      <与密封圈配合面压溃-上法兰失效 type ="bottom" name="connectorUpperFlangeAndStealRingFaceCrush">
+        <value>0.0</value>
+      </与密封圈配合面压溃-上法兰失效>
+      <与下法兰配合面变形-上法兰失效 type ="bottom" name="connectorUpperFlangeAndLowerFlangeFaceCrush">
+        <value>0.0</value>
+      </与下法兰配合面变形-上法兰失效>
+    </上法兰失效>
+    <卡爪失效 type="mid" option="+">
+      <与上法兰配合面变形-卡爪失效 type ="bottom" name="connectorJawAndUpperFlangeFaceCrush">
+        <value>0.0</value>
+      </与上法兰配合面变形-卡爪失效>
+      <与下法兰配合面变形 type ="bottom" name="connectorJawAndLowerFlangeDeformation">
+        <value>0.0</value>
+      </与下法兰配合面变形>
+      <卡爪结构失效 type="mid" option="+">
+        <卡爪变形 type ="bottom" name="connectorJawDeformation">
+          <value>0.0</value>
+        </卡爪变形>
+        <卡爪断裂 type ="bottom" name="connectorJawBreak">
+          <value>0.0</value>
+        </卡爪断裂>
+      </卡爪结构失效>
+    </卡爪失效>
+    <压力环失效 type="mid" option="+">
+      <压力环变形 type ="bottom" name="connectorPressureRingDeformation">
+        <value>0.0</value>
+      </压力环变形>
+      <压力环断裂 type ="bottom" name="connectorPressureRingBreak">
+        <value>0.0</value>
+      </压力环断裂>
+    </压力环失效>
+    <透镜式密封圈失效 type="mid" option="+">
+      <表面磨损 type ="bottom" name="connectorLensSealSurfaceWear">
+        <value>0.0</value>
+      </表面磨损>
+      <变形过大 type ="bottom" name="connectorLensSealSurfaceDeformation">
+        <value>0.0</value>
+      </变形过大>
+    </透镜式密封圈失效>
+  </卡爪上接头失效>
+  <防松结构失效 type="mid" option="+">
+    <放松箱体变形 type ="bottom" name="connectorLockBoxDeformation">
+      <value>0.0</value>
+    </放松箱体变形>
+    <放松柱弯曲变形 type ="bottom" name="connectorLockTubeBending">
+      <value>0.0</value>
+    </放松柱弯曲变形>
+    <锁紧解锁快失效 type="mid" option="+">
+      <锁紧块工作斜面磨损 type ="bottom" name="connectorLockBlockFaceWear">
+        <value>0.0</value>
+      </锁紧块工作斜面磨损>
+      <解锁块工作斜面磨损 type ="bottom" name="connectorUnlockBlockFaceWear">
+        <value>0.0</value>
+      </解锁块工作斜面磨损>
+      <三角块工作斜面磨损 type ="bottom" name="connectorTriangularBlockFaceWear">
+        <value>0.0</value>
+      </三角块工作斜面磨损>
+    </锁紧解锁快失效>
+    <链条支撑轴弯曲变形 type ="bottom" name="connectorChainSupportShaftBending">
+      <value>0.0</value>
+    </链条支撑轴弯曲变形>
+  </防松结构失效>
+</水下连接器结构失效>
