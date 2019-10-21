@@ -33,7 +33,11 @@
             this.ModifyEvent = new System.Windows.Forms.Label();
             this.AddEvent = new System.Windows.Forms.Label();
             this.MainBody = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.EventMenu = new System.Windows.Forms.Panel();
+            this.OperationType = new System.Windows.Forms.ComboBox();
+            this.EventLevel = new System.Windows.Forms.ComboBox();
+            this.EventEnglishName = new System.Windows.Forms.TextBox();
+            this.CurrentEventName = new System.Windows.Forms.TextBox();
             this.ParentEventName = new System.Windows.Forms.Label();
             this.Concel = new System.Windows.Forms.Button();
             this.Confirm = new System.Windows.Forms.Button();
@@ -46,13 +50,9 @@
             this.NewEventFile = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenEventFile = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveEventFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.MoveMenu.SuspendLayout();
             this.MainBody.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.EventMenu.SuspendLayout();
             this.TopMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             this.MoveMenu.Name = "MoveMenu";
             this.MoveMenu.Size = new System.Drawing.Size(143, 90);
             this.MoveMenu.TabIndex = 0;
+            this.MoveMenu.Visible = false;
             // 
             // DeleteEvent
             // 
@@ -103,35 +104,81 @@
             // 
             // MainBody
             // 
+            this.MainBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MainBody.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.MainBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MainBody.Controls.Add(this.panel1);
+            this.MainBody.Controls.Add(this.EventMenu);
             this.MainBody.Controls.Add(this.MoveMenu);
             this.MainBody.Location = new System.Drawing.Point(0, 27);
             this.MainBody.Name = "MainBody";
             this.MainBody.Size = new System.Drawing.Size(800, 423);
             this.MainBody.TabIndex = 2;
             // 
-            // panel1
+            // EventMenu
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.ParentEventName);
-            this.panel1.Controls.Add(this.Concel);
-            this.panel1.Controls.Add(this.Confirm);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(225, 54);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 289);
-            this.panel1.TabIndex = 1;
-            this.panel1.Visible = false;
+            this.EventMenu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.EventMenu.Controls.Add(this.OperationType);
+            this.EventMenu.Controls.Add(this.EventLevel);
+            this.EventMenu.Controls.Add(this.EventEnglishName);
+            this.EventMenu.Controls.Add(this.CurrentEventName);
+            this.EventMenu.Controls.Add(this.ParentEventName);
+            this.EventMenu.Controls.Add(this.Concel);
+            this.EventMenu.Controls.Add(this.Confirm);
+            this.EventMenu.Controls.Add(this.label3);
+            this.EventMenu.Controls.Add(this.label4);
+            this.EventMenu.Controls.Add(this.label5);
+            this.EventMenu.Controls.Add(this.label2);
+            this.EventMenu.Controls.Add(this.label1);
+            this.EventMenu.Location = new System.Drawing.Point(225, 54);
+            this.EventMenu.Name = "EventMenu";
+            this.EventMenu.Size = new System.Drawing.Size(313, 289);
+            this.EventMenu.TabIndex = 1;
+            this.EventMenu.Visible = false;
+            // 
+            // OperationType
+            // 
+            this.OperationType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.OperationType.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.OperationType.FormattingEnabled = true;
+            this.OperationType.Items.AddRange(new object[] {
+            "+",
+            "-"});
+            this.OperationType.Location = new System.Drawing.Point(149, 172);
+            this.OperationType.Name = "OperationType";
+            this.OperationType.Size = new System.Drawing.Size(154, 27);
+            this.OperationType.TabIndex = 12;
+            // 
+            // EventLevel
+            // 
+            this.EventLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EventLevel.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.EventLevel.FormattingEnabled = true;
+            this.EventLevel.Items.AddRange(new object[] {
+            "TOP",
+            "MID",
+            "BUTTOM"});
+            this.EventLevel.Location = new System.Drawing.Point(149, 135);
+            this.EventLevel.Name = "EventLevel";
+            this.EventLevel.Size = new System.Drawing.Size(154, 27);
+            this.EventLevel.TabIndex = 11;
+            // 
+            // EventEnglishName
+            // 
+            this.EventEnglishName.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.EventEnglishName.Location = new System.Drawing.Point(149, 100);
+            this.EventEnglishName.Name = "EventEnglishName";
+            this.EventEnglishName.Size = new System.Drawing.Size(154, 29);
+            this.EventEnglishName.TabIndex = 10;
+            // 
+            // CurrentEventName
+            // 
+            this.CurrentEventName.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.CurrentEventName.Location = new System.Drawing.Point(149, 61);
+            this.CurrentEventName.Name = "CurrentEventName";
+            this.CurrentEventName.Size = new System.Drawing.Size(154, 29);
+            this.CurrentEventName.TabIndex = 9;
             // 
             // ParentEventName
             // 
@@ -243,40 +290,6 @@
             this.SaveEventFile.Size = new System.Drawing.Size(56, 21);
             this.SaveEventFile.Text = "另存为";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(149, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 29);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(149, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 29);
-            this.textBox2.TabIndex = 10;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(149, 135);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 27);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(149, 172);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(154, 27);
-            this.comboBox2.TabIndex = 12;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -287,11 +300,10 @@
             this.Controls.Add(this.TopMenu);
             this.Name = "MainForm";
             this.Text = "水下结构物创建";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.MoveMenu.ResumeLayout(false);
             this.MainBody.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.EventMenu.ResumeLayout(false);
+            this.EventMenu.PerformLayout();
             this.TopMenu.ResumeLayout(false);
             this.TopMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -306,7 +318,7 @@
         private System.Windows.Forms.Panel MainBody;
         private System.Windows.Forms.Label DeleteEvent;
         private System.Windows.Forms.Label ModifyEvent;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel EventMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -319,10 +331,10 @@
         private System.Windows.Forms.ToolStripMenuItem OpenEventFile;
         private System.Windows.Forms.ToolStripMenuItem SaveEventFile;
         private System.Windows.Forms.Label ParentEventName;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox OperationType;
+        private System.Windows.Forms.ComboBox EventLevel;
+        private System.Windows.Forms.TextBox EventEnglishName;
+        private System.Windows.Forms.TextBox CurrentEventName;
     }
 }
 

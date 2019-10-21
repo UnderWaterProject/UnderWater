@@ -12,14 +12,16 @@ namespace UnderWater
 {
     public partial class MainForm : Form
     {
+
+        public static MainForm Instance;
         public MainForm()
         {
+            Instance = this;
             InitializeComponent();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
+            TopMenu topMenu = new TopMenu();
+            MainBody mainBody = new MainBody();
+            EventMenu eventMenu = new EventMenu();
+            EventInfo eventInfo = new EventInfo();
         }
     }
 }
