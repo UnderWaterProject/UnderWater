@@ -45,11 +45,30 @@ namespace UnderWater
                 {
                     startX = SetSubEventPos((Label)MainBody.Instance.mainBody.Controls[tmpChildName]);
                 }
-                //更新父事件位置
+                //
+                int parentX = 0;
+                for(int i=0;i< tmpChildList.Count; i++)
+                {
+                    string subEventName = tmpChildList[i];
+                    parentX += MainBody.Instance.mainBody.Controls[subEventName].Location.X;
+                }
+                parentX /= tmpChildList.Count;
+
+                //获取最后一个子事件
+                string lastChildName = tmpChildList[tmpChildList.Count - 1];
+
+                Label childEventLabel = (Label)MainBody.Instance.mainBody.Controls[lastChildName];
+                tmpEventClass = eventInfoDic[childEventLabel];
                 //获取父事件Name
                 string parentEventName = tmpEventClass.parentEventName;
+                //MessageBox.Show(parentEventName);
                 //获取Label
-                //MainBody.Instance.mainBody.Controls[parentEventName].Location = eventLabel.Location;
+                Label parentEventLabel = (Label)MainBody.Instance.mainBody.Controls[parentEventName];
+                parentEventLabel.Location = new Point(parentX, parentEventLabel.Location.Y);
+                //获取父事件的类信息文件
+                tmpEventClass = eventInfoDic[parentEventLabel];
+                //将位置信息加入类信息文件中
+                tmpEventClass.currentEventPos = parentEventLabel.Location;
             }
             else
             {//当前为最低层
@@ -61,38 +80,10 @@ namespace UnderWater
             return startX + XCell;
         }
 
-        /*
-        private void SetSubEventPos(Label eventLabel)
+        private void DrawLineInEvent()
         {
-            int width = 70;
-            int height = 20;
-            int widthCell = 15;
-            int heightCell = 10;
-            //获取当前事件EventClass
-            EventClass tmpEventClass = eventInfoDic[eventLabel];
-            //获取子事件列表
-            List<string> tmpChildList = tmpEventClass.childList;
-            //获取当前重构孩子数
-            for (int i = 0; i < tmpChildList.Count; i++)
-            {
-                int currentChildCount = tmpEventClass.currentChildCount;
-                Label tmpSubEvent = (Label)MainBody.Instance.mainBody.Controls[tmpChildList[i]];
 
-
-                //设置子事件位置
-                tmpSubEvent.Location = new Point(widthCell+(width + widthCell + tmpEventClass.currentEventPos.X) * currentChildCount, heightCell + height + tmpEventClass.currentEventPos.Y);
-                //存储当前事件的位置
-                eventInfoDic[tmpSubEvent].currentEventPos = tmpSubEvent.Location;
-                MessageBox.Show(tmpSubEvent.Location.ToString());
-                tmpEventClass.currentChildCount += 1;
-
-                if (eventInfoDic[tmpSubEvent].childList != null)
-                {
-                    SetSubEventPos(tmpSubEvent);
-                }
-            }
         }
-        */
 
         private void ClearLocationAndChild()
         {
