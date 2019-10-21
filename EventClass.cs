@@ -68,7 +68,14 @@ namespace UnderWater
 
         public override string ToString()
         {
-            string str = "eventLevel:" + eventLevel + ", operatorType" + operatorType;
+            string str = "parentEventName:" + parentEventName + " eventEnglisthName"
+                + " currentEventName" + currentEventName + " eventEnglishName" + eventEnglishName + " eventLevel:" + eventLevel + ", operatorType" + operatorType;
+            str += "[";
+            foreach (String s in childList)
+            {
+                str += s + ", ";
+            }
+            str += "]";
             return str;
         }
     }

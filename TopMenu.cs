@@ -38,12 +38,25 @@ namespace UnderWater
         {
             //弹出事件创建框
             EventMenu.Instance.eventMenu.Visible = true;
-            
         }
 
         private void OnClick_OpenFile(object sender, EventArgs e)
         {
-
+            String fileName = string.Empty;
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.DefaultExt = "xml";
+            dlg.Filter = "Xml Files|*.xml";
+            if (dlg.ShowDialog() == DialogResult.OK)
+                fileName = dlg.FileName;
+            if (fileName == null)
+                return;
+            OpenReadXml openReadXml = new OpenReadXml(fileName);
+            EventInfo.Instance.eventInfoDic = openReadXml.dict;
+            EventInfo.Instance.ResetEventTree();
+            foreach (var item in openReadXml.dict)
+            {
+                Console.WriteLine(item.Value.ToString());
+            }
         }
 
         private void OnClick_SaveFile(object sender, EventArgs e)

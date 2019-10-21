@@ -22,6 +22,7 @@ namespace UnderWater
             MainBody mainBody = new MainBody();
             EventMenu eventMenu = new EventMenu();
             EventInfo eventInfo = new EventInfo();
+            Utils utils = new Utils();
         }
     }
 }

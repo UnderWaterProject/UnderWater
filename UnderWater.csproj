@@ -59,9 +59,11 @@
     <Compile Include="GenEventLabel.cs" />
     <Compile Include="MainBody.cs" />
     <Compile Include="MoveMenu.cs" />
+    <Compile Include="OpenReadXml.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TopMenu.cs" />
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
