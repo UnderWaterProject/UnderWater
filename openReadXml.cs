@@ -47,6 +47,7 @@ namespace UnderWater
         {
             XmlAttributeCollection collection = node.Attributes;
             EventClass e = new EventClass(collection[0].Value, collection[1].Value, collection[2].Value, collection[3].Value, collection[4].Value);
+            e.layer = Convert.ToInt32(collection[5].Value);
             return e;
         }
 

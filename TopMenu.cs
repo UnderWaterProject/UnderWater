@@ -55,6 +55,7 @@ namespace UnderWater
             EventInfo.Instance.ResetEventTree();
             foreach (var item in openReadXml.dict)
             {
+                Console.Write(item.Key.Name + " : ");
                 Console.WriteLine(item.Value.ToString());
             }
         }

@@ -22,10 +22,16 @@ namespace UnderWater
 
         public void ResetEventTree()
         {
-            Label topEventLabel = GetTopEvent();
             startX = 15;
-
             ClearLocationAndChild();
+
+            foreach (Label tmpLabel in eventInfoDic.Keys)
+            {
+                Console.WriteLine(tmpLabel.Name + ":" + tmpLabel.Location);
+            }
+
+            Label topEventLabel = GetTopEvent();
+            
             SetSubEventPos(topEventLabel);
 
         }
@@ -64,11 +70,12 @@ namespace UnderWater
                 //MessageBox.Show(parentEventName);
                 //获取Label
                 Label parentEventLabel = (Label)MainBody.Instance.mainBody.Controls[parentEventName];
-                parentEventLabel.Location = new Point(parentX, parentEventLabel.Location.Y);
+                parentEventLabel.Location = new Point(parentX, childEventLabel.Location.Y - 40);
                 //获取父事件的类信息文件
                 tmpEventClass = eventInfoDic[parentEventLabel];
                 //将位置信息加入类信息文件中
                 tmpEventClass.currentEventPos = parentEventLabel.Location;
+
             }
             else
             {//当前为最低层
@@ -77,6 +84,7 @@ namespace UnderWater
                 eventLabel.Location = new Point(startX, layer * 40 + 10);
                 tmpEventClass.currentEventPos = eventLabel.Location;
             }
+            
             return startX + XCell;
         }
 
@@ -90,7 +98,8 @@ namespace UnderWater
             foreach (Label tmpLabel in eventInfoDic.Keys)
             {
                 EventClass tmpEventClass = eventInfoDic[tmpLabel];
-                tmpEventClass.currentEventPos = new Point(0, 10);
+                tmpEventClass.currentEventPos = new Point(0, 0);
+                tmpLabel.Location = new Point(0, 0);
                 tmpEventClass.currentChildCount = 0;
             }
         }

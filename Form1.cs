@@ -23,6 +23,7 @@ namespace UnderWater
             EventMenu eventMenu = new EventMenu();
             EventInfo eventInfo = new EventInfo();
             Utils utils = new Utils();
+            MoveMenu moveMenu = new MoveMenu();
         }
     }
 }

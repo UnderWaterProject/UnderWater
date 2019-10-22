@@ -39,6 +39,11 @@ namespace UnderWater
 
         private void OnClick_Event(object sender, EventArgs e)
         {
+            OnClick_Common(sender, e);
+        }
+
+        public void OnClick_Common(object sender, EventArgs e)
+        {
             MouseEventArgs onClick = (MouseEventArgs)e;
             if (onClick.Button == MouseButtons.Left)
             {
@@ -46,10 +51,11 @@ namespace UnderWater
             }
             else if (onClick.Button == MouseButtons.Right)
             {
-                //设置上级事件
                 EventMenu.Instance.eventMenu.Controls["ParentEventName"].Text = ((Label)sender).Name;
-                //显示EventMenu面板
-                EventMenu.Instance.eventMenu.Visible = true;
+                MoveMenu.Instance.moveMenu.Visible = true;
+
+                MainBody.Instance.mainBody.Controls.Add(MoveMenu.Instance.moveMenu);
+                MoveMenu.Instance.moveMenu.Location = new Point(((Label)sender).Location.X + 70, ((Label)sender).Location.Y + 20);
             }
         }
 
