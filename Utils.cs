@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Xml;
 
 namespace UnderWater
 {
@@ -57,6 +58,44 @@ namespace UnderWater
                 MainBody.Instance.mainBody.Controls.Add(MoveMenu.Instance.moveMenu);
                 MoveMenu.Instance.moveMenu.Location = new Point(((Label)sender).Location.X + 70, ((Label)sender).Location.Y + 20);
             }
+        }
+
+        public XmlDocument ObjToXml(Dictionary<Label, EventClass> dict, String rootName)
+        {
+            Label label = (Label)MainBody.Instance.mainBody.Controls[rootName];
+            XmlDocument xmldoc = new XmlDocument();
+            XmlDeclaration xmldecl = xmldoc.CreateXmlDeclaration("1.0", "utf-8", null);
+            xmldoc.AppendChild(xmldecl);
+            XmlElement root = xmldoc.CreateElement("Node");
+            setAttributeToNode(root, dict[label]);
+            EventClass eRoot = dict[label];
+            xmldoc.AppendChild(root);
+            travelTree(root, eRoot.childList, dict, xmldoc);
+            return xmldoc;
+        }
+
+        private void travelTree(XmlElement node, List<String> childs, Dictionary<Label, EventClass> dict, XmlDocument xmldoc)
+        {
+            if (node == null)
+                return;
+            foreach (String s in childs) {
+                Label label = (Label)MainBody.Instance.mainBody.Controls[s];
+                EventClass eventClass = dict[label];
+                XmlElement tmp = xmldoc.CreateElement("Node");
+                setAttributeToNode(tmp, dict[label]);
+                node.AppendChild(tmp);
+                travelTree(tmp, eventClass.childList, dict, xmldoc);
+            }
+        }
+
+        private void setAttributeToNode(XmlElement node, EventClass eventClass)
+        {
+            node.SetAttribute("parentEventName", eventClass.parentEventName);
+            node.SetAttribute("currentEventName", eventClass.currentEventName);
+            node.SetAttribute("eventEnglishName", eventClass.eventEnglishName);
+            node.SetAttribute("eventLevel", eventClass.eventLevel);
+            node.SetAttribute("operatorType", eventClass.operatorType);
+            node.SetAttribute("layer", eventClass.layer.ToString());
         }
 
     }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Node parentEventName="null" currentEventName="11111" eventEnglishName="one" eventLevel="TOP" operatorType="+" layer="0">
+  <Node parentEventName="one" currentEventName="22222" eventEnglishName="two" eventLevel="MID" operatorType="+" layer="1">
+    <Node parentEventName="two" currentEventName="33333" eventEnglishName="three" eventLevel="MID" operatorType="+" layer="2">
+      <Node parentEventName="three" currentEventName="44444" eventEnglishName="four" eventLevel="BUTTOM" operatorType="+" layer="3" />
+    </Node>
+  </Node>
+  <Node parentEventName="one" currentEventName="55555" eventEnglishName="five" eventLevel="MID" operatorType="+" layer="1">
+    <Node parentEventName="five" currentEventName="66666" eventEnglishName="six" eventLevel="MID" operatorType="+" layer="2">
+      <Node parentEventName="six" currentEventName="77777" eventEnglishName="seven" eventLevel="BUTTOM" operatorType="+" layer="3">
+        <Node parentEventName="seven" currentEventName="w" eventEnglishName="w" eventLevel="BUTTOM" operatorType="+" layer="4" />
+      </Node>
+    </Node>
+  </Node>
+</Node>

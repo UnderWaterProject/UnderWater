@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace UnderWater
 {
@@ -62,7 +63,26 @@ namespace UnderWater
 
         private void OnClick_SaveFile(object sender, EventArgs e)
         {
-
+            // 另存为 xml 文件
+            Utils u = new Utils();
+            Dictionary<Label, EventClass> dict = EventInfo.Instance.eventInfoDic;
+            String rootName = "";
+            foreach (EventClass item in dict.Values) {
+                if (item.eventLevel == "TOP") {
+                    rootName = item.eventEnglishName;
+                }
+            }
+            XmlDocument xmldoc = u.ObjToXml(dict, rootName);
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.DefaultExt = "xml";
+            dlg.Filter = "Xml Files|*.xml";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string file = dlg.FileName;
+                Console.WriteLine("保存的路径是： " + file);
+                xmldoc.Save(file);
+            }
+            
         }
     }
 }
