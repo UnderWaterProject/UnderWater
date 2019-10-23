@@ -32,8 +32,8 @@ namespace UnderWater
             //更新上级事件的子节点数
             eventClass.AddParentEventChildCount();
             EventInfo.Instance.eventInfoDic.Add(eventLabel, eventClass);
-            //测试
-            EventInfo.Instance.ResetEventTree();
+            
+            
         }
 
         private void OnClick_Event(object sender, EventArgs e)

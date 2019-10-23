@@ -50,6 +50,7 @@
             this.NewEventFile = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenEventFile = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveEventFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.OperatorName = new System.Windows.Forms.Label();
             this.MoveMenu.SuspendLayout();
             this.MainBody.SuspendLayout();
             this.EventMenu.SuspendLayout();
@@ -119,6 +120,7 @@
             // EventMenu
             // 
             this.EventMenu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.EventMenu.Controls.Add(this.OperatorName);
             this.EventMenu.Controls.Add(this.OperationType);
             this.EventMenu.Controls.Add(this.EventLevel);
             this.EventMenu.Controls.Add(this.EventEnglishName);
@@ -131,9 +133,9 @@
             this.EventMenu.Controls.Add(this.label5);
             this.EventMenu.Controls.Add(this.label2);
             this.EventMenu.Controls.Add(this.label1);
-            this.EventMenu.Location = new System.Drawing.Point(225, 54);
+            this.EventMenu.Location = new System.Drawing.Point(225, 27);
             this.EventMenu.Name = "EventMenu";
-            this.EventMenu.Size = new System.Drawing.Size(313, 289);
+            this.EventMenu.Size = new System.Drawing.Size(313, 316);
             this.EventMenu.TabIndex = 1;
             this.EventMenu.Visible = false;
             // 
@@ -145,7 +147,7 @@
             this.OperationType.Items.AddRange(new object[] {
             "+",
             "-"});
-            this.OperationType.Location = new System.Drawing.Point(149, 172);
+            this.OperationType.Location = new System.Drawing.Point(149, 202);
             this.OperationType.Name = "OperationType";
             this.OperationType.Size = new System.Drawing.Size(154, 27);
             this.OperationType.TabIndex = 12;
@@ -159,7 +161,7 @@
             "TOP",
             "MID",
             "BUTTOM"});
-            this.EventLevel.Location = new System.Drawing.Point(149, 135);
+            this.EventLevel.Location = new System.Drawing.Point(149, 165);
             this.EventLevel.Name = "EventLevel";
             this.EventLevel.Size = new System.Drawing.Size(154, 27);
             this.EventLevel.TabIndex = 11;
@@ -167,7 +169,7 @@
             // EventEnglishName
             // 
             this.EventEnglishName.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.EventEnglishName.Location = new System.Drawing.Point(149, 100);
+            this.EventEnglishName.Location = new System.Drawing.Point(149, 130);
             this.EventEnglishName.Name = "EventEnglishName";
             this.EventEnglishName.Size = new System.Drawing.Size(154, 29);
             this.EventEnglishName.TabIndex = 10;
@@ -175,7 +177,7 @@
             // CurrentEventName
             // 
             this.CurrentEventName.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CurrentEventName.Location = new System.Drawing.Point(149, 61);
+            this.CurrentEventName.Location = new System.Drawing.Point(149, 91);
             this.CurrentEventName.Name = "CurrentEventName";
             this.CurrentEventName.Size = new System.Drawing.Size(154, 29);
             this.CurrentEventName.TabIndex = 9;
@@ -184,7 +186,7 @@
             // 
             this.ParentEventName.AutoSize = true;
             this.ParentEventName.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ParentEventName.Location = new System.Drawing.Point(145, 31);
+            this.ParentEventName.Location = new System.Drawing.Point(145, 61);
             this.ParentEventName.Name = "ParentEventName";
             this.ParentEventName.Size = new System.Drawing.Size(49, 19);
             this.ParentEventName.TabIndex = 8;
@@ -193,7 +195,7 @@
             // Concel
             // 
             this.Concel.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Concel.Location = new System.Drawing.Point(149, 236);
+            this.Concel.Location = new System.Drawing.Point(149, 266);
             this.Concel.Name = "Concel";
             this.Concel.Size = new System.Drawing.Size(76, 33);
             this.Concel.TabIndex = 7;
@@ -203,7 +205,7 @@
             // Confirm
             // 
             this.Confirm.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Confirm.Location = new System.Drawing.Point(31, 236);
+            this.Confirm.Location = new System.Drawing.Point(31, 266);
             this.Confirm.Name = "Confirm";
             this.Confirm.Size = new System.Drawing.Size(76, 33);
             this.Confirm.TabIndex = 6;
@@ -214,7 +216,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(3, 175);
+            this.label3.Location = new System.Drawing.Point(3, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 19);
             this.label3.TabIndex = 5;
@@ -224,7 +226,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(3, 138);
+            this.label4.Location = new System.Drawing.Point(3, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 19);
             this.label4.TabIndex = 4;
@@ -234,7 +236,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(3, 103);
+            this.label5.Location = new System.Drawing.Point(3, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 19);
             this.label5.TabIndex = 3;
@@ -244,7 +246,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(3, 64);
+            this.label2.Location = new System.Drawing.Point(3, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 19);
             this.label2.TabIndex = 1;
@@ -254,7 +256,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(3, 31);
+            this.label1.Location = new System.Drawing.Point(3, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 19);
             this.label1.TabIndex = 0;
@@ -289,6 +291,16 @@
             this.SaveEventFile.Name = "SaveEventFile";
             this.SaveEventFile.Size = new System.Drawing.Size(56, 21);
             this.SaveEventFile.Text = "另存为";
+            // 
+            // OperatorName
+            // 
+            this.OperatorName.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.OperatorName.Location = new System.Drawing.Point(3, 5);
+            this.OperatorName.Name = "OperatorName";
+            this.OperatorName.Size = new System.Drawing.Size(307, 35);
+            this.OperatorName.TabIndex = 13;
+            this.OperatorName.Text = "label6";
+            this.OperatorName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
@@ -335,6 +347,7 @@
         private System.Windows.Forms.ComboBox EventLevel;
         private System.Windows.Forms.TextBox EventEnglishName;
         private System.Windows.Forms.TextBox CurrentEventName;
+        private System.Windows.Forms.Label OperatorName;
     }
 }
 

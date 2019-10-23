@@ -24,6 +24,21 @@ namespace UnderWater
             EventInfo eventInfo = new EventInfo();
             Utils utils = new Utils();
             MoveMenu moveMenu = new MoveMenu();
+            EventOperation eventOperation = new EventOperation();
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.DrawLine(Pens.Red, new Point(0, 0), new Point(20, 20));
+        }
+
+        private void DrawLine(Label tmp1, Label tmp2)
+        {
+            Pen pen = new Pen(Color.Red, 5);
+
+            Graphics g = this.CreateGraphics();
+            g.DrawLine(pen, tmp1.Location, tmp2.Location);
         }
     }
 }

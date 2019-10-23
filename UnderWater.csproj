@@ -50,6 +50,7 @@
     <Compile Include="EventInfo.cs" />
     <Compile Include="EventClass.cs" />
     <Compile Include="EventMenu.cs" />
+    <Compile Include="EventOperation.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

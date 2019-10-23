@@ -55,13 +55,27 @@ namespace UnderWater
             eventLevel = eventMenu.Controls["EventLevel"].Text;
             operationType = eventMenu.Controls["OperationType"].Text;
 
+            //获取操作类型：添加， 修改， 删除
+            string operatorName = eventMenu.Controls["OperatorName"].Text;
+            switch (operatorName)
+            {
+                case "添加事件":
+                    //添加事件
+                    new GenEventLabel();
+                    break;
+                case "修改事件":
+                    EventOperation.Instance.ModifyEvent();
+                    break;
+                case "删除事件":
+                    EventOperation.Instance.DeleteEvent();
+                    break;
+            }
+            //重构树
+            EventInfo.Instance.ResetEventTree();
+            //连线
+
             //清空面板值
             Clear();
-
-            //添加事件
-            //创建一个顶事件Label
-            new GenEventLabel();
-
             //关闭窗口
             eventMenu.Visible = false;
         }

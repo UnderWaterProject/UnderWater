@@ -52,6 +52,7 @@ namespace UnderWater
             }
             else if (onClick.Button == MouseButtons.Right)
             {
+                //当前事件名字
                 EventMenu.Instance.eventMenu.Controls["ParentEventName"].Text = ((Label)sender).Name;
                 MoveMenu.Instance.moveMenu.Visible = true;
 
