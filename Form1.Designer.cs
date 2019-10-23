@@ -34,6 +34,7 @@
             this.AddEvent = new System.Windows.Forms.Label();
             this.MainBody = new System.Windows.Forms.Panel();
             this.EventMenu = new System.Windows.Forms.Panel();
+            this.OperatorName = new System.Windows.Forms.Label();
             this.OperationType = new System.Windows.Forms.ComboBox();
             this.EventLevel = new System.Windows.Forms.ComboBox();
             this.EventEnglishName = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.NewEventFile = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenEventFile = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveEventFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.OperatorName = new System.Windows.Forms.Label();
             this.MoveMenu.SuspendLayout();
             this.MainBody.SuspendLayout();
             this.EventMenu.SuspendLayout();
@@ -138,6 +138,16 @@
             this.EventMenu.Size = new System.Drawing.Size(313, 316);
             this.EventMenu.TabIndex = 1;
             this.EventMenu.Visible = false;
+            // 
+            // OperatorName
+            // 
+            this.OperatorName.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.OperatorName.Location = new System.Drawing.Point(3, 5);
+            this.OperatorName.Name = "OperatorName";
+            this.OperatorName.Size = new System.Drawing.Size(307, 35);
+            this.OperatorName.TabIndex = 13;
+            this.OperatorName.Text = "label6";
+            this.OperatorName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // OperationType
             // 
@@ -292,16 +302,6 @@
             this.SaveEventFile.Size = new System.Drawing.Size(56, 21);
             this.SaveEventFile.Text = "另存为";
             // 
-            // OperatorName
-            // 
-            this.OperatorName.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.OperatorName.Location = new System.Drawing.Point(3, 5);
-            this.OperatorName.Name = "OperatorName";
-            this.OperatorName.Size = new System.Drawing.Size(307, 35);
-            this.OperatorName.TabIndex = 13;
-            this.OperatorName.Text = "label6";
-            this.OperatorName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -312,6 +312,7 @@
             this.Controls.Add(this.TopMenu);
             this.Name = "MainForm";
             this.Text = "水下结构物创建";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.MoveMenu.ResumeLayout(false);
             this.MainBody.ResumeLayout(false);
             this.EventMenu.ResumeLayout(false);

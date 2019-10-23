@@ -40,5 +40,13 @@ namespace UnderWater
             Graphics g = this.CreateGraphics();
             g.DrawLine(pen, tmp1.Location, tmp2.Location);
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("是否退出？", "确定关闭", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
